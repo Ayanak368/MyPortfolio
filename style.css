@@ -190,6 +190,7 @@ body{
     font-family: 'League Spartan', sans-serif;
     font-size: clamp(60px, 5vw, 100px);
     font-weight: 800;
+    
     line-height: 0.95;
     letter-spacing: -3px;
     color: #006052;
@@ -1253,5 +1254,9 @@ body.dark-mode .contact-item h4{
         transform: translateY(0);
     }
 }
+
+
+
+
 
 
