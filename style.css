@@ -20,10 +20,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1050px;
+    max-width: auto;
     margin: 0 auto;
     padding: 28px 20px;
     background-color: #eee8df;
+     position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 70px;
+
 }
 
 .logo {
@@ -32,13 +37,9 @@ body{
     font-weight: 900;
     letter-spacing: -1.5px;
     text-decoration: none;
+    margin-left: 450px;
 }
 
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
 
 .nav-links {
     display: flex;
@@ -47,6 +48,7 @@ body{
     list-style: none;
     margin: 0;
     padding: 0;
+    margin-right:300px;
 }
 
 .nav-links a {
@@ -70,6 +72,9 @@ body{
     color: white;
     text-decoration: none;
     font-size: 16px;
+    margin-right:50px;
+    
+    
 }
 
 /* Keyboard shortcut */
@@ -120,11 +125,17 @@ body{
 
 /* Mobile navbar */
 @media (max-width: 768px) {
+
     .navbar {
         position: relative;
         padding: 20px 5%;
         flex-wrap: nowrap;
         border-bottom: 1px solid #658568;
+        justify-content: space-between;
+    }
+
+    .logo{
+        margin-left: 0;
     }
 
     .nav-right {
@@ -177,7 +188,7 @@ body{
 
 .hero h1 {
     font-family: 'League Spartan', sans-serif;
-    font-size: clamp(60px, 9vw, 120px);
+    font-size: clamp(60px, 5vw, 100px);
     font-weight: 800;
     line-height: 0.95;
     letter-spacing: -3px;
@@ -265,7 +276,7 @@ body{
 
 .about-text h2 {
     color: #006052;
-    font-size: 52px;
+    font-size: 50px;
     font-weight: 800;
     letter-spacing: -2px;
     margin: 0 0 30px;
@@ -375,8 +386,8 @@ body{
 
 .skills-content h2 {
     color: #006052;
-    font-size: 52px;
-    font-weight: 800;
+    font-size: 50px;
+    font-weight: 700;
     letter-spacing: -2px;
     margin: 0 0 28px;
 }
@@ -466,8 +477,8 @@ body{
 
 .projects-heading h2 {
     color: #006052;
-    font-size: clamp(42px, 5vw, 60px); /*clamp() in CSS helps you create a responsive font size that automatically adjusts according to the screen size.*/
-    font-weight: 800;
+    font-size: 50px; /*clamp() in CSS helps you create a responsive font size that automatically adjusts according to the screen size.*/
+    font-weight: 700;
     letter-spacing: -2px;
     margin: 12px 0;
 }
@@ -707,8 +718,8 @@ body{
 
 .toolbox-heading h2 {
     color: #006052;
-    font-size: 52px;
-    font-weight: 800;
+    font-size: 50px;
+    font-weight: 700;
     letter-spacing: -2px;
     margin: 0 0 30px;
 }
@@ -832,8 +843,8 @@ body{
 
 .contact-heading h2 {
     color: #006052;
-    font-size: clamp(42px, 5vw, 60px);
-    font-weight: 800;
+    font-size: 50px;
+    font-weight: 700;
     letter-spacing: -2px;
     margin: 12px 0 16px;
 }
@@ -1181,4 +1192,66 @@ body.dark-mode .form-group textarea {
     color: #eee8df;
     border-color: #526b69;
 }
+body.dark-mode .project-links a{
+    color: #299681;
+    
+}
+
+body.dark-mode .contact-item h4{
+    color: #61a89a;
+}
+/*animations
+/* Hero animation */
+.hero h1 {
+    animation: fadeIn 1s ease;
+}
+
+.hero-description {
+    animation: fadeIn 1.5s ease;
+}
+
+.hero-buttons {
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo{
+    animation: falls 1s ease;
+}
+
+@keyframes falls{
+    from{
+        transform: translateY(-80px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+.nav-links{
+    animation:fallsdown 1s ease
+
+}
+
+@keyframes fallsdown{
+    from{
+        transform: translateY(-80px);
+
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
 

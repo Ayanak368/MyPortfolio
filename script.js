@@ -5,9 +5,10 @@ const navLinks = document.querySelector(".nav-links");
 menuButton.addEventListener("click", function () {
     navLinks.classList.toggle("show");
 
-    // const isOpen = navLinks.classList.contains("show");
-    // menuButton.setAttribute("aria-expanded", isOpen);
+
 });
+
+//light mode to dark mode
 
 const button = document.getElementById("theme-toggle");
 
